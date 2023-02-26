@@ -1,4 +1,18 @@
-* {
+/* 600px以下の場合 */
+@media screen and (max-width: 600px) {
+    body {
+        background: linear-gradient(to right, #a4ffbf, rgb(16, 246, 0));
+    }
+  }
+  
+  /* 600pxより大きい場合 */
+  @media screen and (min-width: 601px) {
+    body {
+        background: linear-gradient(to right, #a4ffbf, rgb(46, 17, 63));
+    }
+  }
+  
+  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -9,7 +23,7 @@
     font-size: 1.2rem;
     width: 100vw;
     height: 100vh;
-    background: linear-gradient(to right, rgb(106, 63, 126), rgb(185, 69, 69));
+    /* background: linear-gradient(to right, #a4ffbf, rgb(16, 246, 0)); */
     overflow: hidden;
     position: relative;
 }
@@ -25,9 +39,10 @@ nav {
 }
 
 .logo-area {
-    flex-basis: 20%;
+    flex-basis: 30%;
     display: flex;
     align-items: center;
+    color: white;
 }
 
 .logo {
@@ -38,8 +53,9 @@ nav {
 
 
 .nav-links {
-    flex: 1; /* 空いてるスペースの余白を強制的に入れてる。flex-growと同じ。 */
-    text-align: right; /* インライン要素だから右寄せできる。a */
+    font-size: 30px;
+    flex: 1; 
+    text-align: right;
 }
 
 .nav-links ul {
@@ -75,7 +91,6 @@ nav {
     width: 1000px;
     height: 1000px;
     position: absolute;
-    /* background: #ccc; */
     border-radius: 50%;
     top: 0;
     left: 0;
@@ -90,7 +105,7 @@ nav {
 .feature {
     position: absolute;
     display: flex;
-    color: #fff;
+    color: #000000;
 }
 
 .feature div {
@@ -107,22 +122,48 @@ nav {
 }
 
 .two {
-    top: 100px;
-    left: 340px;
-    transform: rotate(-90deg);
+    top: 245px;
+    right: 180px;
+    transform: rotate(-45deg);
 }
 
 .three {
-    bottom: 450px;
-    left: 50px;
+    top: 140px;
+    left: 400px;
+    transform: rotate(-90deg);
+}
+
+.four {
+    top: 245px;
+    left: 200px;
+    transform: rotate(-135deg);
+}
+
+.five {
+    bottom: 470px;
+    left: 130px;
     transform: rotate(-180deg);
 
 }
 
-.four {
+.six {
+    bottom: 245px;
+    left: 160px;
+    transform: rotate(-225deg);
+
+}
+
+.seven {
     bottom: 150px;
     right: 370px;
     transform: rotate(-270deg);
+
+}
+
+.eight {
+    bottom: 245px;
+    right: 130px;
+    transform: rotate(-315deg);
 
 }
 
@@ -132,7 +173,7 @@ nav {
     z-index: 1;
     top: 50%;
     transform: translateY(-50%);
-    left: 27%;
+    left: 30%;
 }
 
 .control {
@@ -141,6 +182,7 @@ nav {
     right: 15%;
     transform: translateY(-50%);
     text-align: center;
+    font-size: 40px;
 }
 
 .control img {
@@ -153,10 +195,14 @@ nav {
 }
 
 #upBtn {
+    width: 40px;
+    height: 40px;
     cursor: pointer;
 }
 
 #downBtn {
+    width: 40px;
+    height: 40px;
     cursor: pointer;
     transform: rotate(-180deg);
 }
@@ -164,11 +210,12 @@ nav {
 .overlay {
     width: 0;
     height: 0;
-    border-top: 500px solid #fff;
+    border-top: 500px solid #000000;
     border-right: 500px solid transparent;
-    border-bottom: 500px solid #fff;
-    border-left: 500px solid #fff;
+    border-bottom: 500px solid #000000;
+    border-left: 500px solid #000000;
     top: 0;
     left: 0;
     position: absolute;
 }
+
