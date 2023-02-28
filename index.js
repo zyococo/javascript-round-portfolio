@@ -15,3 +15,17 @@ downBtn.onclick = function () {
   circle.style.transform = rotateSum;
   rotateValue = rotateSum;
 };
+
+window.addEventListener('resize', function() {
+    const windowWidth = window.innerWidth;
+    const body = document.querySelector('body');
+  
+    if (windowWidth < 1300) {
+        body.style.height = '50px';
+    } else if (windowWidth >= 1300 && windowWidth < 1300) {
+        body.style.height = '70px';
+    } else {
+        body.style.height = '100px';
+    }
+  });
+  

@@ -1,13 +1,17 @@
 /* 600px以下の場合 */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1300px) {
     body {
+        width: 200px;
+        height: 200px;
         background: linear-gradient(to right, #a4ffbf, rgb(16, 246, 0));
     }
   }
   
   /* 600pxより大きい場合 */
-  @media screen and (min-width: 601px) {
+  @media screen and (min-width: 1300px) {
     body {
+        width: 1000px;
+        height: 1000px;
         background: linear-gradient(to right, #a4ffbf, rgb(46, 17, 63));
     }
   }
